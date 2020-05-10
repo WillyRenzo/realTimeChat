@@ -17,7 +17,6 @@ export default function Join(){
                 placeholder="Name"
                 className="joinInput" 
                 type="text" 
-                value={name}
                 onChange={(event) => setName(event.target.value)} />
         </div>
         <div>
@@ -25,7 +24,6 @@ export default function Join(){
                 placeholder="Room" 
                 className="joinInput mt-20" 
                 type="text" 
-                value={room}
                 onChange={(event) => setRoom(event.target.value)} />
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
